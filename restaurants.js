@@ -54,10 +54,10 @@ const restaurants = [
     atmosphere_en: "Lively",
     rating: "夯",
     spicy: 3,
-    dianping: "https://m.dianping.com/shop/731796035",
-    dianping2: "https://m.dianping.com/shop/1846224196",
-    dianping2_label: "大众点评（长寿路店）",
-    dianping2_label_en: "Dianping (Changshou Rd)",
+    dianpingLinks: [
+      { url: "https://m.dianping.com/shop/731796035", label: "大众点评（富民路店）", label_en: "Dianping (Fumin Rd)" },
+      { url: "https://m.dianping.com/shop/1846224196", label: "大众点评（长寿路店）", label_en: "Dianping (Changshou Rd)" },
+    ],
   },
   {
     name: "卿家姆",
@@ -84,6 +84,9 @@ const restaurants = [
     atmosphere: "精致",
     atmosphere_en: "Refined",
     rating: "夯",
-    dianping: "https://m.dianping.com/shop/1022572955"
+    dianpingLinks: [
+      { url: "https://m.dianping.com/shop/1022572955", label: "大众点评（门店一）", label_en: "Dianping (Branch 1)" },
+      { url: "https://m.dianping.com/shop/877017586", label: "大众点评（门店二）", label_en: "Dianping (Branch 2)" },
+    ],
   },
 ];
