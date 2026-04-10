@@ -1,9 +1,10 @@
 const grid = document.getElementById('restaurant-grid');
 const filterBtns = document.querySelectorAll('.filter-btn');
+let activeFilter = 'all';
 
-function priceLabel(range) {
-  const map = { '¥': 'Budget', '¥¥': 'Moderate', '¥¥¥': 'Upscale', '¥¥¥¥': 'Fine Dining' };
-  return map[range] || range;
+function r_field(r, key) {
+  if (currentLang === 'en' && r[key + '_en'] !== undefined) return r[key + '_en'];
+  return r[key];
 }
 
 function renderCards(list) {
@@ -13,42 +14,81 @@ function renderCards(list) {
     return;
   }
   list.forEach(r => {
-    const dishes = Array.isArray(r.mustTry) ? r.mustTry : [r.mustTry];
+    const dishes = Array.isArray(r_field(r, 'mustTry')) ? r_field(r, 'mustTry') : [r_field(r, 'mustTry')];
     const dishTags = dishes.map(d => `<span class="dish-tag">${d}</span>`).join('');
 
     const metaRows = [
-      r.perPerson   ? `<span class="info-pill">💰 ${r.perPerson}</span>` : `<span class="info-pill">💰 ${priceLabel(r.priceRange)}</span>`,
-      r.groupSize   ? `<span class="info-pill">👥 ${r.groupSize}</span>` : '',
-      r.occasion    ? `<span class="info-pill">🎉 ${r.occasion}</span>` : '',
-      r.atmosphere  ? `<span class="info-pill">🏠 ${r.atmosphere}</span>` : '',
+      r_field(r, 'groupSize')   ? `<span class="info-pill">👥 ${r_field(r, 'groupSize')}</span>` : '',
+      r_field(r, 'occasion')    ? `<span class="info-pill">🎉 ${r_field(r, 'occasion')}</span>` : '',
+      r_field(r, 'atmosphere')  ? `<span class="info-pill">🏠 ${r_field(r, 'atmosphere')}</span>` : '',
     ].filter(Boolean).join('');
 
     const reservationRow = r.reservation
-      ? `<p class="reservation">🗓 ${r.reservation}</p>`
+      ? `<p class="reservation">${t('reservationLabel')} ${r_field(r, 'reservation')}</p>`
       : '';
+
+    const spicyChilis = r.spicy ? '🌶️'.repeat(r.spicy) : '';
+
+    const headerContent = r.rating
+      ? `<div class="card-rating"><span class="rating-text">${r.rating}</span><span class="card-chili">${spicyChilis}</span></div>`
+      : `<div class="card-emoji">${r.emoji}</div>`;
+
+    const perPerson = r_field(r, 'perPerson') || r.priceRange;
 
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
-      <div class="card-emoji">${r.emoji}</div>
-      <div class="card-body">
-        <div class="card-meta-top">
-          <span class="tag">${r.category}</span>
-          <span class="price">${r.priceRange}</span>
+      ${headerContent}
+      <div class="card-summary">
+        <div class="summary-main">
+          <h2>${r_field(r, 'name')}</h2>
+          <div class="summary-meta">
+            <span class="summary-category">${tFilter(r.category)}</span>
+            <span class="summary-location">📍 ${r_field(r, 'neighborhood')}</span>
+            <span class="summary-price">💰 ${perPerson}</span>
+          </div>
         </div>
-        <h2>${r.name}</h2>
-        <p class="neighborhood">📍 ${r.neighborhood}</p>
-        <p class="address">${r.address}</p>
-        <p class="description">${r.description}</p>
+        <button class="expand-btn" aria-label="${t('expand')}">
+          <svg class="expand-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+      </div>
+      <div class="card-detail">
+        <p class="address">📌 ${r_field(r, 'address')}</p>
+        <p class="description">${r_field(r, 'description')}</p>
         ${reservationRow}
-        <div class="info-pills">${metaRows}</div>
+        ${metaRows ? `<div class="info-pills">${metaRows}</div>` : ''}
         <div class="must-try">
-          <span class="must-try-label">必点 / Must try</span>
+          <span class="must-try-label">${t('mustTryLabel')}</span>
           <div class="dish-tags">${dishTags}</div>
         </div>
       </div>
     `;
+
+    card.querySelector('.expand-btn').addEventListener('click', () => {
+      card.classList.toggle('expanded');
+    });
+
     grid.appendChild(card);
+  });
+}
+
+function applyFilter() {
+  const filtered = activeFilter === 'all'
+    ? restaurants
+    : restaurants.filter(r => r.category === activeFilter);
+  renderCards(filtered);
+}
+
+function updateStaticText() {
+  document.querySelector('.subtitle').textContent = t('subtitle');
+  document.querySelector('.hero h1').textContent = t('title');
+  document.querySelector('.tagline').textContent = t('tagline');
+  document.querySelector('footer p').textContent = t('footer');
+  document.getElementById('lang-btn').textContent = t('langBtn');
+  filterBtns.forEach(btn => {
+    btn.textContent = tFilter(btn.dataset.filter);
   });
 }
 
@@ -56,10 +96,16 @@ filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    const filtered = filter === 'all' ? restaurants : restaurants.filter(r => r.category === filter);
-    renderCards(filtered);
+    activeFilter = btn.dataset.filter;
+    applyFilter();
   });
 });
 
-renderCards(restaurants);
+document.getElementById('lang-btn').addEventListener('click', () => {
+  currentLang = currentLang === 'zh' ? 'en' : 'zh';
+  updateStaticText();
+  applyFilter();
+});
+
+updateStaticText();
+applyFilter();

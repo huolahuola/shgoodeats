@@ -1,44 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>火龙果's Shanghai Eats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
     <div class="hero">
+      <button id="lang-btn" class="lang-btn">EN</button>
       <div class="hero-text">
-        <p class="subtitle">Personally curated by 火龙果</p>
-        <h1>The Best Restaurants in Shanghai</h1>
-        <p class="tagline">Hidden gems, local favourites, and unforgettable meals — handpicked from someone who actually lives here.</p>
+        <p class="subtitle">火龙果亲测推荐</p>
+        <h1>上海最好吃的餐厅</h1>
+        <p class="tagline">隐藏宝藏、本地最爱、难忘的一餐 — 全部来自一个真正住在这里的人。</p>
       </div>
     </div>
   </header>
 
   <main>
     <section class="filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="shanghainese">Shanghainese</button>
-      <button class="filter-btn" data-filter="sichuan">Sichuan</button>
-      <button class="filter-btn" data-filter="hotpot">Hotpot</button>
-      <button class="filter-btn" data-filter="yunnan">云南菜 Yunnan</button>
-      <button class="filter-btn" data-filter="international">International</button>
-      <button class="filter-btn" data-filter="dim-sum">Dim Sum</button>
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="shanghainese">上海菜</button>
+      <button class="filter-btn" data-filter="sichuan">四川菜</button>
+      <button class="filter-btn" data-filter="hotpot">火锅</button>
+      <button class="filter-btn" data-filter="yunnan">云南菜</button>
+      <button class="filter-btn" data-filter="international">国际</button>
+      <button class="filter-btn" data-filter="dim-sum">点心</button>
     </section>
 
-    <section class="grid" id="restaurant-grid">
-      <!-- Cards injected by JS -->
-    </section>
+    <section class="grid" id="restaurant-grid"></section>
   </main>
 
   <footer>
-    <p>Made with love by 火龙果 &mdash; Shanghai, China</p>
+    <p>火龙果出品 · 上海</p>
   </footer>
 
+  <!-- SVG filter for ink stamp effect -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="ink-stamp" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="4" seed="8" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+        <feComposite in="displaced" in2="SourceGraphic" operator="in"/>
+      </filter>
+    </defs>
+  </svg>
+
   <script src="restaurants.js"></script>
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,17 +1,30 @@
 const restaurants = [
   {
     name: "南蛮子（进贤路店）",
+    name_en: "Nán Mán Zǐ (Jinxian Rd)",
     category: "yunnan",
+    category_en: "yunnan",
     neighborhood: "法租界 · 浦西核心区",
+    neighborhood_en: "French Concession · Puxi",
     address: "进贤路，徐汇区",
+    address_en: "Jinxian Rd, Xuhui District",
     description: "云南菜馆，藏在法租界的街边小店。环境简朴，烟火气十足，更适合朋友聚餐而非正式请客。没有包间，但有大圆桌，2到10个人都能坐得舒服。",
+    description_en: "A no-frills Yunnan restaurant tucked into a side street in the French Concession. Lively and unpretentious — perfect for a casual dinner with friends. No private rooms, but the large round tables fit groups of 2 to 10 easily.",
     mustTry: ["黑三剁", "木姜子牛肉", "菌子鸡汤", "炸排骨", "烤罗非鱼", "酥红豆", "辣子鸡", "牙签牛肉"],
+    mustTry_en: ["Black Three-Mince (黑三剁)", "Litsea Beef (木姜子牛肉)", "Wild Mushroom Chicken Soup (菌子鸡汤)", "Fried Pork Ribs (炸排骨)", "Grilled Tilapia (烤罗非鱼)", "Crispy Red Beans (酥红豆)", "Chilli Chicken (辣子鸡)", "Toothpick Beef (牙签牛肉)"],
     priceRange: "¥¥",
     perPerson: "人均 ¥100",
+    perPerson_en: "~¥100 / person",
     reservation: "平时无需预定，周末饭点可在大众点评提前订位",
+    reservation_en: "Walk-ins welcome on weekdays. For weekend peak hours, book ahead on Dianping.",
     groupSize: "2–10 人",
+    groupSize_en: "2–10 people",
     occasion: "朋友聚餐",
+    occasion_en: "Friends dinner",
     atmosphere: "简朴",
-    emoji: "🌿"
+    atmosphere_en: "Casual",
+    emoji: "🌿",
+    rating: "夯",
+    spicy: 1
   },
 ];
