@@ -470,6 +470,13 @@ body {
   color: var(--gold);
   margin-bottom: 8px;
   letter-spacing: 2px;
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.author-name:hover {
+  opacity: 0.75;
 }
 
 .author-bio {
