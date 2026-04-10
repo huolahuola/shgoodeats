@@ -553,7 +553,7 @@ body {
   flex-shrink: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .authors-inner {
     flex-direction: column;
     gap: 24px;
@@ -574,7 +574,7 @@ footer {
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .hero { padding: 50px 20px; }
   .hero h1 { font-size: 1.6rem; }
   .tagline { font-size: 0.85rem; }
