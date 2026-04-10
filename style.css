@@ -775,7 +775,7 @@ body {
 
 .guestbook-input::placeholder,
 .guestbook-textarea::placeholder {
-  color: rgba(255,255,255,0.3);
+  color: rgba(244,114,182,0.45);
 }
 
 .guestbook-textarea {
