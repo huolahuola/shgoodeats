@@ -87,8 +87,8 @@ const restaurants = [
     atmosphere_en: "Refined",
     rating: "夯",
     dianpingLinks: [
-      { url: "https://m.dianping.com/shop/1022572955", label: "大众点评（门店一）", label_en: "Dianping (Branch 1)" },
-      { url: "https://m.dianping.com/shop/877017586", label: "大众点评（门店二）", label_en: "Dianping (Branch 2)" },
+      { url: "https://m.dianping.com/shop/1022572955", label: "大众点评（外滩店）", label_en: "Dianping (Bund)" },
+      { url: "https://m.dianping.com/shop/877017586", label: "大众点评（中山公园店）", label_en: "Dianping (Zhongshan Park)" },
     ],
   },
 ];
