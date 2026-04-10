@@ -72,11 +72,14 @@ function renderCards(list) {
       </div>
     `;
 
-    card.querySelector('.card-summary').addEventListener('click', () => {
+    const toggleCard = () => {
       card.classList.toggle('expanded');
       const label = card.querySelector('.expand-label');
       label.textContent = card.classList.contains('expanded') ? t('collapse') : t('expand');
-    });
+    };
+
+    card.querySelector('.card-summary').addEventListener('click', toggleCard);
+    card.querySelector('.expand-hint').addEventListener('click', toggleCard);
 
     grid.appendChild(card);
   });
