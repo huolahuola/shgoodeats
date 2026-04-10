@@ -2,8 +2,8 @@ const restaurants = [
   {
     name: "南蛮子（进贤路店）",
     name_en: "Nán Mán Zǐ (Jinxian Rd)",
-    category: "yunnan",
-    category_en: "yunnan",
+    category: "yunguizhou",
+    category_en: "yunguizhou",
     neighborhood: "法租界 · 浦西核心区",
     neighborhood_en: "French Concession · Puxi",
     address: "进贤路，徐汇区",
