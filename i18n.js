@@ -20,7 +20,7 @@ const translations = {
     reservationLabel: "📅",
     dianpingBtn: "查看大众点评",
     byob: "🍷火龙果温馨提示：上海所有餐厅均可自带酒水和奶茶🧋",
-    footer: "bussinbussin工作室出品 · 上海🧡阿姆斯特丹",
+    footer: "bussinbussin工作室出品 · 上海 · 阿姆斯特丹",
     expand: "展开",
     collapse: "收起",
     langBtn: "EN",
