@@ -24,7 +24,7 @@ const restaurants = [
     atmosphere: "简朴",
     atmosphere_en: "Casual",
     emoji: "🌿",
-    rating: "夯",
+    rating: 2,
     spicy: 1,
     dianping: "https://m.dianping.com/shop/2201962"
   },
@@ -52,7 +52,7 @@ const restaurants = [
     occasion_en: "Friends dinner / Must-eat on return",
     atmosphere: "热闹",
     atmosphere_en: "Lively",
-    rating: "夯",
+    rating: 2,
     spicy: 2,
     dianpingLinks: [
       { url: "https://m.dianping.com/shop/731796035", label: "大众点评（富民路店）", label_en: "Dianping (Fumin Rd)" },
@@ -85,7 +85,7 @@ const restaurants = [
     occasion_en: "Friends dinner / Intimate hosting",
     atmosphere: "精致",
     atmosphere_en: "Refined",
-    rating: "顶级",
+    rating: 3,
     dianpingLinks: [
       { url: "https://m.dianping.com/shop/1022572955", label: "大众点评（外滩店）", label_en: "Dianping (Bund)" },
       { url: "https://m.dianping.com/shop/877017586", label: "大众点评（中山公园店）", label_en: "Dianping (Zhongshan Park)" },
@@ -111,7 +111,7 @@ const restaurants = [
     atmosphere_en: "Lively",
     perPerson: "人均 ¥100–150",
     perPerson_en: "~¥100–150 / person",
-    rating: "人上人",
+    rating: 1,
     spicy: 2,
     dianpingLinks: [
       { url: "https://m.dianping.com/shop/113900524", label: "大众点评（南京西路丰盛里店）", label_en: "Dianping (Fengsheng Li, W Nanjing Rd)" },
@@ -137,7 +137,7 @@ const restaurants = [
     atmosphere_en: "Wine bar vibes",
     perPerson: "人均 ¥100–150",
     perPerson_en: "~¥100–150 / person",
-    rating: "人上人",
+    rating: 1,
     spicy: 5,
     dianping: "https://m.dianping.com/shop/1804042946",
   },
@@ -165,7 +165,7 @@ const restaurants = [
     occasion_en: "Friends dinner / Hosting",
     atmosphere: "高端精致",
     atmosphere_en: "Upscale",
-    rating: "夯",
+    rating: 2,
     dianping: "https://www.dianping.com/shop/H3pRXBQ0J4tT09I2",
   },
 ];
