@@ -1,6 +1,6 @@
 const translations = {
   zh: {
-    subtitle: "吃商天花板 · 火龙果",
+    subtitle: "吃商天花板·火龙果的",
     title: "「上海好吃地图」",
     tagline: "隐藏宝藏、本地最爱、难忘的一餐 — 全部来自一个真正住在这里的人。",
     filters: {
