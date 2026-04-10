@@ -52,6 +52,9 @@ function renderCards(list) {
             <span class="summary-price">💰 ${perPerson}</span>
           </div>
         </div>
+      </div>
+      <div class="expand-hint">
+        <span class="expand-label">${t('expand')}</span>
         <span class="expand-icon">&#8964;</span>
       </div>
       <div class="card-detail">
@@ -71,6 +74,8 @@ function renderCards(list) {
 
     card.querySelector('.card-summary').addEventListener('click', () => {
       card.classList.toggle('expanded');
+      const label = card.querySelector('.expand-label');
+      label.textContent = card.classList.contains('expanded') ? t('collapse') : t('expand');
     });
 
     grid.appendChild(card);

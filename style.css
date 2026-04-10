@@ -259,17 +259,35 @@ body {
 
 .summary-main { flex: 1; }
 
+.expand-hint {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: 4px 14px 8px;
+  cursor: pointer;
+}
+
+.expand-label {
+  font-size: 0.75rem;
+  color: #aaa;
+  font-family: sans-serif;
+  transition: color 0.2s;
+}
+
 .expand-icon {
-  font-size: 1.2rem;
-  color: #bbb;
+  font-size: 1rem;
+  color: #aaa;
   line-height: 1;
   transition: transform 0.3s ease, color 0.2s ease;
-  flex-shrink: 0;
-  align-self: center;
 }
 
 .card.expanded .expand-icon {
   transform: rotate(180deg);
+  color: var(--red);
+}
+
+.card.expanded .expand-label {
   color: var(--red);
 }
 
@@ -307,7 +325,7 @@ body {
 
 /* ── DETAIL (hidden by default) ── */
 .card-detail {
-  max-height: 52px;
+  max-height: 80px;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.3s ease, mask-position 0.3s ease;
   padding: 10px 18px 0;
