@@ -283,8 +283,8 @@ const restaurants = [
   {
     name: "贰粉之壹·宁波海鲜米粉",
     name_en: "Èr Fěn Zhī Yī · Ningbo Seafood Rice Noodles",
-    category: "domestic",
-    category_en: "domestic",
+    category: "jiangzhe",
+    category_en: "jiangzhe",
     neighborhood: "中山公园",
     neighborhood_en: "Zhongshan Park",
     address: "中山公园附近，长宁区",
