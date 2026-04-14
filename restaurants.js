@@ -146,7 +146,7 @@ const restaurants = [
     category_en: "japanese",
     neighborhood: "浦东 · 世纪公园板块",
     neighborhood_en: "Pudong · Century Park",
-    address: "浦东·嘉里城",
+    address: "浦东·世纪公园",
     address_en: "Kerry Parkside, Pudong New Area",
     description: "日式烧肉天花板，没有并列的。什么肉都好吃，可以根据人数和喜好点拼盘，反正点下来都差不多贵。碾压铁屋、老干杯、橘炎胡同等一众高端日式烧肉。人均500不含酒已经能吃得非常满足。",
     description_en: "The undisputed peak of Japanese yakiniku in Shanghai — nothing comes close. Every cut is exceptional; order a combo platter sized to your group. Leaves Iron House, Don Quijote, and every other high-end yakiniku in the dust. ¥500/person ex-drinks is more than satisfying.",
