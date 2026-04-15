@@ -28,9 +28,9 @@ const translations = {
     tagLabels: { category: '🍽 菜系', occasion: '🎉 场合', atmosphere: '🏠 氛围', group: '👥 人数' },
     tagAll: '全部',
     tagMaps: {
-      occasion: { '一人食': '一人食', '朋友聚餐': '朋友聚餐', '家庭聚餐': '家庭聚餐', '请客': '请客', '商务': '商务' },
-      atmosphere: { '热闹': '热闹', '安静': '安静', '精致': '精致', '简朴': '简朴', '有包间': '有包间' },
-      group: { '一人也行': '一人也行', '2–6人': '2–6人', '6人以上': '6人以上' },
+      occasion: { '一人食': '一人食', '朋友聚餐': '朋友聚餐', '家庭聚餐': '家庭聚餐', '可以请客': '可以请客' },
+      atmosphere: { '热闹': '热闹', '安静': '安静', '精致': '精致', '简单': '简单' },
+      group: { '一人可行': '一人可行', '2–6人': '2–6人', '6人以上': '6人以上', '有包间': '有包间' },
     },
   },
   en: {
@@ -62,9 +62,9 @@ const translations = {
     tagLabels: { category: '🍽 Cuisine', occasion: '🎉 Occasion', atmosphere: '🏠 Vibe', group: '👥 Group size' },
     tagAll: 'All',
     tagMaps: {
-      occasion: { '一人食': 'Solo', '朋友聚餐': 'Friends dinner', '家庭聚餐': 'Family meal', '请客': 'Hosting', '商务': 'Business' },
-      atmosphere: { '热闹': 'Lively', '安静': 'Quiet', '精致': 'Refined', '简朴': 'Casual', '有包间': 'Private rooms' },
-      group: { '一人也行': 'Solo-friendly', '2–6人': '2–6 ppl', '6人以上': '6+ ppl' },
+      occasion: { '一人食': 'Solo', '朋友聚餐': 'Friends dinner', '家庭聚餐': 'Family meal', '可以请客': 'Host-friendly' },
+      atmosphere: { '热闹': 'Lively', '安静': 'Quiet', '精致': 'Refined', '简单': 'Casual' },
+      group: { '一人可行': 'Solo ok', '2–6人': '2–6 ppl', '6人以上': '6+ ppl', '有包间': 'Private rooms' },
     },
   },
 };
