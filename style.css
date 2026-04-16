@@ -338,6 +338,11 @@ body {
 
 .card.expanded .expand-hint--inline {
   display: flex;
+  opacity: 0.35;
+}
+
+.card.expanded .expand-hint--inline:hover {
+  opacity: 0.75;
 }
 
 .pills-row {
