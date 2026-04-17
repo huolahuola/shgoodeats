@@ -1,4 +1,4 @@
-const CACHE_NAME = 'shgoodeats-v6';
+const CACHE_NAME = 'shgoodeats-v7';
 const ASSETS = [
   '/shgoodeats/',
   '/shgoodeats/index.html',
@@ -10,7 +10,7 @@ const ASSETS = [
   '/shgoodeats/hlg-photo.jpg',
   '/shgoodeats/hlg-avatar.svg',
   '/shgoodeats/dragonfruit.svg',
-  '/shgoodeats/dragonfruit-icon.svg',
+  '/shgoodeats/rating-icon.png',
   '/shgoodeats/lj.jpg',
   '/shgoodeats/guestbook.js',
   '/shgoodeats/manifest.json',
