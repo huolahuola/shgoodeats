@@ -110,6 +110,7 @@ body {
 .rating-explainer-icon {
   width: 26px;
   height: 26px;
+  object-fit: contain;
   transform: rotate(-15deg);
   mix-blend-mode: multiply;
   vertical-align: middle;
@@ -248,6 +249,7 @@ body {
 .rating-fruit {
   width: 42px;
   height: 42px;
+  object-fit: contain;
   transform: rotate(-15deg);
   mix-blend-mode: multiply;
   transition: width 0.4s ease, height 0.4s ease;
