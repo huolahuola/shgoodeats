@@ -875,8 +875,8 @@ footer {
 
 .stamp {
   position: absolute;
-  bottom: 0px;
-  right: 2px;
+  bottom: 2px;
+  right: 5px;
   padding: 7px 10px;
   border: 2.5px solid #c9a227;
   border-radius: 3px;
