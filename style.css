@@ -207,13 +207,13 @@ body {
   display: flex;
   align-items: center;
   min-height: 60px;
-  padding: 12px 148px 12px 16px;
+  padding: 12px 120px 12px 16px;
   transition: min-height 0.4s ease, padding 0.4s ease;
 }
 
 .card.expanded .card-rating {
   min-height: 120px;
-  padding: 20px 188px 20px 20px;
+  padding: 20px 150px 20px 20px;
 }
 
 .card-title {
@@ -238,31 +238,34 @@ body {
 .rating-fruits {
   position: absolute;
   right: 12px;
-  top: -18px;
+  top: -12px;
   display: flex;
   flex-direction: row;
-  gap: 0;
   z-index: 3;
   transition: all 0.4s ease;
 }
 
 .rating-fruit {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 56px;
   object-fit: contain;
+  margin-right: -12px;
   transform: rotate(-15deg);
   mix-blend-mode: multiply;
   transition: width 0.4s ease, height 0.4s ease;
 }
 
+.rating-fruit:last-child {
+  margin-right: 0;
+}
+
 .card.expanded .rating-fruits {
-  top: -28px;
-  gap: 0;
+  top: -20px;
 }
 
 .card.expanded .rating-fruit {
-  width: 84px;
-  height: 84px;
+  width: 88px;
+  height: 68px;
 }
 
 .card-chili {
