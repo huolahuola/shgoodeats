@@ -391,7 +391,7 @@ const restaurants = [
   },
   {
     name: "威皇广福和小海鲜",
-    category: "jiangzhe",
+    category: "domestic",
     address: "全市多家分店",
     description: "花雕醉鸡煲的鲜美这么多年都出品稳定，是冬天隔段时间就会想喝的！推荐顺序：先喝鸡汤，再下海鲜，最后下牛肉！不可预定，饭点排队，建议错峰前往。",
     mustTry: ["花雕醉鸡煲", "煲仔饭"],
