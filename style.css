@@ -27,9 +27,9 @@ body {
   position: absolute;
   top: 24px;
   right: 28px;
-  background: rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.15);
-  color: #1a1a2a;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
   padding: 6px 16px;
   border-radius: 100px;
   font-family: -apple-system, sans-serif;
@@ -40,13 +40,14 @@ body {
 }
 
 .lang-btn:hover {
-  background: rgba(0,0,0,0.14);
+  background: rgba(255,255,255,0.2);
 }
 
 /* ── HEADER ── */
 .hero {
-  background: linear-gradient(135deg, #fde0ea 0%, #d5e8f5 100%);
-  color: #1a1a2a;
+  background: var(--dark);
+  background-image: linear-gradient(135deg, #1a1a1a 0%, #2c1a0e 100%);
+  color: var(--white);
   padding: 80px 40px;
   text-align: center;
   position: relative;
@@ -57,7 +58,7 @@ body {
   content: '上海';
   position: absolute;
   font-size: 200px;
-  color: rgba(0,0,0,0.03);
+  color: rgba(255,255,255,0.03);
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
@@ -93,7 +94,7 @@ body {
 .tagline {
   max-width: 600px;
   margin: 0 auto;
-  color: rgba(26,26,42,0.6);
+  color: rgba(255,255,255,0.65);
   font-size: 1.05rem;
   font-style: italic;
 }
@@ -118,7 +119,7 @@ body {
 .rating-explainer {
   max-width: 600px;
   margin: 0 auto 12px;
-  color: rgba(26,26,42,0.5);
+  color: rgba(255,255,255,0.5);
   font-size: 0.82rem;
   font-family: sans-serif;
   letter-spacing: 0.5px;
@@ -127,7 +128,7 @@ body {
 .byob-tip {
   max-width: 600px;
   margin: 10px auto 0;
-  color: rgba(26,26,42,0.5);
+  color: rgba(255,255,255,0.55);
   font-size: 0.85rem;
   font-style: italic;
   font-family: sans-serif;
@@ -556,7 +557,7 @@ body {
 
 .authors-toggle-text {
   font-size: 0.8rem;
-  color: rgba(26,26,42,0.6);
+  color: rgba(255,255,255,0.8);
   font-family: sans-serif;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -564,7 +565,7 @@ body {
 
 .authors-toggle-icon {
   font-size: 0.9rem;
-  color: rgba(26,26,42,0.6);
+  color: rgba(255,255,255,0.8);
   transition: transform 0.3s ease;
   line-height: 1;
 }
@@ -591,7 +592,7 @@ body {
   opacity: 1;
   margin-top: 16px;
   padding-top: 24px;
-  border-top: 1px solid rgba(26,26,42,0.12);
+  border-top: 1px solid rgba(255,255,255,0.12);
 }
 
 .author-card {
@@ -635,7 +636,7 @@ body {
 
 .author-title {
   font-size: 0.75rem;
-  color: rgba(26,26,42,0.45);
+  color: rgba(255,255,255,0.35);
   font-family: sans-serif;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -644,7 +645,7 @@ body {
 
 .author-bio {
   font-size: 0.82rem;
-  color: rgba(26,26,42,0.55);
+  color: rgba(255,255,255,0.55);
   font-family: sans-serif;
   line-height: 1.6;
 }
@@ -652,7 +653,7 @@ body {
 .author-divider {
   width: 1px;
   height: 60px;
-  background: rgba(26,26,42,0.15);
+  background: rgba(255,255,255,0.15);
   flex-shrink: 0;
 }
 
