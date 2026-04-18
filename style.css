@@ -201,7 +201,7 @@ body {
 }
 
 .card-rating {
-  background: linear-gradient(135deg, #f4b8ce 0%, #b8d8f0 100%);
+  background: #c8dff0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -214,6 +214,9 @@ body {
 .card.expanded .card-rating {
   min-height: 100px;
 }
+
+.card-rating--spicy { background: #f9ccd8; }
+.card-rating--mild  { background: #c8dff0; }
 
 .card-title {
   font-family: 'Noto Serif SC', serif;
