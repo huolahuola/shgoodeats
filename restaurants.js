@@ -142,7 +142,7 @@ const restaurants = [
     mustTry: ["拼盘（按人数点）", "和牛海胆塔塔", "海胆和牛釜饭"],
     mustTry_en: ["Combo Platter (sized to group)", "Wagyu & Uni Tartare (和牛海胆塔塔)", "Uni Wagyu Kamameshi (海胆和牛釜饭)"],
     priceRange: "¥¥¥¥",
-    perPerson: "人均 ¥500（不点酒）",
+    perPerson: "人均 ¥500（不含酒）",
     perPerson_en: "~¥500 / person (ex-drinks)",
     reservation: "可提前订位，有包间",
     reservation_en: "Reservations available; private rooms offered.",
