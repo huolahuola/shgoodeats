@@ -126,12 +126,38 @@ body {
 }
 
 .byob-tip {
-  max-width: 600px;
-  margin: 10px auto 0;
+  margin: 8px 0 0;
   color: rgba(255,255,255,0.55);
   font-size: 0.85rem;
   font-style: italic;
   font-family: sans-serif;
+}
+
+/* ── HERO BOTTOM TWO-COLUMN ── */
+.hero-bottom {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.hero-instructions {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.instructions-title {
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.hero-authors-wrap {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 /* ── FILTERS (now part of tag-filters pane) ── */
@@ -998,5 +1024,10 @@ footer {
   .stamp {
     bottom: -8px;
     right: -36px;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    gap: 20px;
   }
 }
